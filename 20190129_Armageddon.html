@@ -63,7 +63,18 @@ function play_start(){player.playVideo();}
 function play_pause(){player.pauseVideo();}
 function play_stop(){player.stopVideo();}
 
-
+function play_back2(){
+var aa = player.getCurrentTime();
+player.seekTo( aa - 2 );
+var aa = player.getCurrentTime();
+console.log(aa)
+}
+function play_back3(){
+var aa = player.getCurrentTime();
+player.seekTo( aa - 3 );
+var aa = player.getCurrentTime();
+console.log(aa)
+}
 function play_back5(){
 var aa = player.getCurrentTime();
 player.seekTo( aa - 5 );
@@ -82,6 +93,8 @@ console.log(aa)
 <button id="play" onClick="play_start()">再生</button>
 <button id="pause" onClick="play_pause()">一時停止</button>
 <button id="pause" onClick="play_stop()">停止</button></br>
+<button id="pause" onClick="play_back2()">2秒戻る</button></br>
+<button id="pause" onClick="play_back3()">3秒戻る</button></br>
 <button id="pause" onClick="play_back5()">5秒戻る</button></br>
 <button id="pause" onClick="play_forward10()">10秒先</button></br>
 
